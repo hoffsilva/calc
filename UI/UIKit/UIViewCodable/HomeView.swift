@@ -15,10 +15,25 @@ final class HomeView: UIView {
     
     private lazy var verticalContentStackView: UIStackView = {
         UIStackViewBuilderImp()
+            .prepareForConstraints()
             .withAlignment(.fill)
             .withOrientation(.vertical)
             .withDistribution(.fill)
             .withSpacing(10)
+            .build()
+    }()
+    
+    private lazy var LCDDisplayView: UIView = {
+        UIViewBuilderImp()
+            .build()
+    }()
+    
+    private lazy var LCDDisplayLabel: UILabel = {
+        UILabelBuilderImp()
+            .prepareForConstraints()
+            .withAlignment(.right)
+            .withText("0")
+            .withFont(.systemFont(ofSize: 100))
             .build()
     }()
     
@@ -218,6 +233,8 @@ extension HomeView: UIViewCodable {
     
     func setupViewsHierarchy() {
         addSubview(verticalContentStackView)
+        verticalContentStackView.addArrangedSubview(LCDDisplayView)
+        LCDDisplayView.addSubview(LCDDisplayLabel)
         setupHorizontalStackViewLineOneViewsHierarchy()
         setupHorizontalStackViewLineTwoViewsHierarchy()
         setupHorizontalStackViewLineThreeViewsHierarchy()
@@ -229,6 +246,12 @@ extension HomeView: UIViewCodable {
         verticalContentStackView.pinSafeBottom()
         verticalContentStackView.centerHorizontally()
         verticalContentStackView.width(with: self.frame.width)
+        
+        LCDDisplayLabel.pinTop()
+        LCDDisplayLabel.pinRight(10)
+        LCDDisplayLabel.pinBottom()
+        LCDDisplayLabel.pinLeft(10)
+        
         setupConstraintsButtonsLineOne()
         setupConstraintsButtonsLineTwo()
         setupConstraintsButtonsLineThree()
