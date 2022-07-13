@@ -69,6 +69,25 @@ extension UIView {
         self.pinLeft(constant)
     }
     
+    public func aspectRatio(with multiplier: CGFloat) {
+        let constraint = NSLayoutConstraint(
+            item: self,
+            attribute: .height,
+            relatedBy: .equal,
+            toItem: self,
+            attribute: .width,
+            multiplier: multiplier,
+            constant: 0
+        )
+        self.addConstraint(constraint)
+        constraint.isActive = true
+    }
+    
+    public func setSize(size: CGSize) {
+        self.height(with: size.width)
+        self.width(with: size.height)
+    }
+    
     @discardableResult
     public func centerVertically(_ constant: CGFloat = 0.0) -> NSLayoutConstraint? {
         guard let superview = self.superview else {
