@@ -17,6 +17,8 @@ final class HomeView: UIView {
         UIStackViewBuilderImp()
             .withAlignment(.fill)
             .withOrientation(.vertical)
+            .withDistribution(.fill)
+            .withSpacing(10)
             .build()
     }()
     
@@ -24,6 +26,8 @@ final class HomeView: UIView {
         UIStackViewBuilderImp()
             .withAlignment(.fill)
             .withOrientation(.horizontal)
+            .withDistribution(.fill)
+            .withSpacing(10)
             .build()
     }()
     
@@ -59,6 +63,8 @@ final class HomeView: UIView {
         UIStackViewBuilderImp()
             .withAlignment(.fill)
             .withOrientation(.horizontal)
+            .withDistribution(.fill)
+            .withSpacing(10)
             .build()
     }()
     
@@ -94,6 +100,8 @@ final class HomeView: UIView {
         UIStackViewBuilderImp()
             .withAlignment(.fill)
             .withOrientation(.horizontal)
+            .withDistribution(.fill)
+            .withSpacing(10)
             .build()
     }()
     
@@ -130,6 +138,8 @@ final class HomeView: UIView {
         UIStackViewBuilderImp()
             .withAlignment(.fill)
             .withOrientation(.horizontal)
+            .withDistribution(.fill)
+            .withSpacing(10)
             .build()
     }()
     
@@ -165,6 +175,8 @@ final class HomeView: UIView {
         UIStackViewBuilderImp()
             .withAlignment(.fill)
             .withOrientation(.horizontal)
+            .withDistribution(.fill)
+            .withSpacing(10)
             .build()
     }()
     
@@ -214,6 +226,9 @@ extension HomeView: UIViewCodable {
     }
     
     func setupConstraints() {
+        verticalContentStackView.pinSafeBottom()
+        verticalContentStackView.centerHorizontally()
+        verticalContentStackView.width(with: self.frame.width)
         setupConstraintsButtonsLineOne()
         setupConstraintsButtonsLineTwo()
         setupConstraintsButtonsLineThree()
