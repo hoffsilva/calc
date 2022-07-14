@@ -344,7 +344,7 @@ extension HomeView: UIViewCodable {
     
     private func setupConstraintsButtonsLineFive() {
         buttonZero.setSize(size: buttonSize)
-        buttonZero.aspectRatio(with: 1)
+        buttonZero.aspectRatio(with: 2.10)
         buttonDot.setSize(size: buttonSize)
         buttonDot.aspectRatio(with: 1)
         buttonEqual.setSize(size: buttonSize)
