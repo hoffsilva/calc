@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class HomeView: UIView {
+public final class HomeView: UIView {
     
     private lazy var buttonSize: CGSize = {
         CGSize(width: 78, height: 78)
@@ -25,6 +25,8 @@ final class HomeView: UIView {
     
     private lazy var LCDDisplayView: UIView = {
         UIViewBuilderImp()
+            .prepareForConstraints()
+            .withBackgroundColor(.white)
             .build()
     }()
     
@@ -39,6 +41,7 @@ final class HomeView: UIView {
     
     private lazy var horizontalStackViewLineOne: UIStackView = {
         UIStackViewBuilderImp()
+            .prepareForConstraints()
             .withAlignment(.fill)
             .withOrientation(.horizontal)
             .withDistribution(.fill)
@@ -48,6 +51,7 @@ final class HomeView: UIView {
     
     private lazy var buttonAC: UIButton = {
         UIButtonBuilderImp()
+            .prepareForConstraints()
             .withTitle("AC", state: .normal)
             .withBackgroundColor(.systemYellow)
             .build()
@@ -55,6 +59,7 @@ final class HomeView: UIView {
     
     private lazy var buttonPlusMinus: UIButton = {
         UIButtonBuilderImp()
+            .prepareForConstraints()
             .withTitle("+/-", state: .normal)
             .withBackgroundColor(.systemYellow)
             .build()
@@ -62,6 +67,7 @@ final class HomeView: UIView {
     
     private lazy var buttonPercent: UIButton = {
         UIButtonBuilderImp()
+            .prepareForConstraints()
             .withTitle("%", state: .normal)
             .withBackgroundColor(.systemYellow)
             .build()
@@ -69,6 +75,7 @@ final class HomeView: UIView {
     
     private lazy var buttonDivision: UIButton = {
         UIButtonBuilderImp()
+            .prepareForConstraints()
             .withTitle("/", state: .normal)
             .withBackgroundColor(.systemYellow)
             .build()
@@ -76,6 +83,7 @@ final class HomeView: UIView {
     
     private lazy var horizontalStackViewLineTwo: UIStackView = {
         UIStackViewBuilderImp()
+            .prepareForConstraints()
             .withAlignment(.fill)
             .withOrientation(.horizontal)
             .withDistribution(.fill)
@@ -85,34 +93,39 @@ final class HomeView: UIView {
     
     private lazy var buttonSeven: UIButton = {
         UIButtonBuilderImp()
-            .withTitle("AC", state: .normal)
+            .prepareForConstraints()
+            .withTitle("7", state: .normal)
             .withBackgroundColor(.systemYellow)
             .build()
     }()
     
     private lazy var buttonEight: UIButton = {
         UIButtonBuilderImp()
-            .withTitle("+/-", state: .normal)
+            .prepareForConstraints()
+            .withTitle("8", state: .normal)
             .withBackgroundColor(.systemYellow)
             .build()
     }()
     
     private lazy var buttonNine: UIButton = {
         UIButtonBuilderImp()
-            .withTitle("%", state: .normal)
+            .prepareForConstraints()
+            .withTitle("9", state: .normal)
             .withBackgroundColor(.systemYellow)
             .build()
     }()
     
     private lazy var buttonMultiply: UIButton = {
         UIButtonBuilderImp()
-            .withTitle("/", state: .normal)
+            .prepareForConstraints()
+            .withTitle("*", state: .normal)
             .withBackgroundColor(.systemYellow)
             .build()
     }()
     
     private lazy var horizontalStackViewLineThree: UIStackView = {
         UIStackViewBuilderImp()
+            .prepareForConstraints()
             .withAlignment(.fill)
             .withOrientation(.horizontal)
             .withDistribution(.fill)
@@ -122,28 +135,32 @@ final class HomeView: UIView {
     
     private lazy var buttonFour: UIButton = {
         UIButtonBuilderImp()
-            .withTitle("AC", state: .normal)
+            .prepareForConstraints()
+            .withTitle("4", state: .normal)
             .withBackgroundColor(.systemYellow)
             .build()
     }()
     
     private lazy var buttonFive: UIButton = {
         UIButtonBuilderImp()
-            .withTitle("+/-", state: .normal)
+            .prepareForConstraints()
+            .withTitle("5", state: .normal)
             .withBackgroundColor(.systemYellow)
             .build()
     }()
     
     private lazy var buttonSix: UIButton = {
         UIButtonBuilderImp()
-            .withTitle("%", state: .normal)
+            .prepareForConstraints()
+            .withTitle("6", state: .normal)
             .withBackgroundColor(.systemYellow)
             .build()
     }()
     
     private lazy var buttonMinus: UIButton = {
         UIButtonBuilderImp()
-            .withTitle("/", state: .normal)
+            .prepareForConstraints()
+            .withTitle("-", state: .normal)
             .withBackgroundColor(.systemYellow)
             .build()
     }()
@@ -151,6 +168,7 @@ final class HomeView: UIView {
     
     private lazy var horizontalStackViewLineFour: UIStackView = {
         UIStackViewBuilderImp()
+            .prepareForConstraints()
             .withAlignment(.fill)
             .withOrientation(.horizontal)
             .withDistribution(.fill)
@@ -160,6 +178,7 @@ final class HomeView: UIView {
     
     private lazy var buttonOne: UIButton = {
         UIButtonBuilderImp()
+            .prepareForConstraints()
             .withTitle("1", state: .normal)
             .withBackgroundColor(.systemYellow)
             .build()
@@ -167,6 +186,7 @@ final class HomeView: UIView {
     
     private lazy var buttonTwo: UIButton = {
         UIButtonBuilderImp()
+            .prepareForConstraints()
             .withTitle("2", state: .normal)
             .withBackgroundColor(.systemYellow)
             .build()
@@ -174,6 +194,7 @@ final class HomeView: UIView {
     
     private lazy var buttonThree: UIButton = {
         UIButtonBuilderImp()
+            .prepareForConstraints()
             .withTitle("3", state: .normal)
             .withBackgroundColor(.systemYellow)
             .build()
@@ -181,13 +202,15 @@ final class HomeView: UIView {
     
     private lazy var buttonPlus: UIButton = {
         UIButtonBuilderImp()
-            .withTitle("4", state: .normal)
+            .prepareForConstraints()
+            .withTitle("+", state: .normal)
             .withBackgroundColor(.systemYellow)
             .build()
     }()
     
     private lazy var horizontalStackViewLineFive: UIStackView = {
         UIStackViewBuilderImp()
+            .prepareForConstraints()
             .withAlignment(.fill)
             .withOrientation(.horizontal)
             .withDistribution(.fill)
@@ -197,28 +220,31 @@ final class HomeView: UIView {
     
     private lazy var buttonZero: UIButton = {
         UIButtonBuilderImp()
-            .withTitle("1", state: .normal)
+            .prepareForConstraints()
+            .withTitle("0", state: .normal)
             .withBackgroundColor(.systemYellow)
             .build()
     }()
     
     private lazy var buttonDot: UIButton = {
         UIButtonBuilderImp()
-            .withTitle("2", state: .normal)
+            .prepareForConstraints()
+            .withTitle(".", state: .normal)
             .withBackgroundColor(.systemYellow)
             .build()
     }()
     
     private lazy var buttonEqual: UIButton = {
         UIButtonBuilderImp()
-            .withTitle("3", state: .normal)
+            .prepareForConstraints()
+            .withTitle("=", state: .normal)
             .withBackgroundColor(.systemYellow)
             .build()
     }()
     
     // MARK: - Initialization
     
-    init() {
+    public init() {
         super.init(frame: .zero)
         configureView()
     }
@@ -231,7 +257,7 @@ final class HomeView: UIView {
 
 extension HomeView: UIViewCodable {
     
-    func setupViewsHierarchy() {
+    public func setupViewsHierarchy() {
         addSubview(verticalContentStackView)
         verticalContentStackView.addArrangedSubview(LCDDisplayView)
         LCDDisplayView.addSubview(LCDDisplayLabel)
@@ -242,21 +268,25 @@ extension HomeView: UIViewCodable {
         setupHorizontalStackViewLineFiveViewsHierarchy()
     }
     
-    func setupConstraints() {
+    public func setupConstraints() {
         verticalContentStackView.pinSafeBottom()
         verticalContentStackView.centerHorizontally()
-        verticalContentStackView.width(with: self.frame.width)
-        
-        LCDDisplayLabel.pinTop()
-        LCDDisplayLabel.pinRight(10)
-        LCDDisplayLabel.pinBottom()
-        LCDDisplayLabel.pinLeft(10)
+        verticalContentStackView.constraintWidth(toAnchor: self.widthAnchor)
         
         setupConstraintsButtonsLineOne()
         setupConstraintsButtonsLineTwo()
         setupConstraintsButtonsLineThree()
         setupConstraintsButtonsLineFour()
         setupConstraintsButtonsLineFive()
+        
+        LCDDisplayLabel.pinTop()
+        LCDDisplayLabel.pinRight(10)
+        LCDDisplayLabel.pinBottom()
+        LCDDisplayLabel.pinLeft(10)
+    }
+    
+    public func additionalConfiguration() {
+        self.backgroundColor = .red
     }
     
     private func setupHorizontalStackViewLineOneViewsHierarchy() {
@@ -299,56 +329,37 @@ extension HomeView: UIViewCodable {
     }
     
     private func setupConstraintsButtonsLineOne() {
-        buttonAC.setSize(size: buttonSize)
-        buttonAC.aspectRatio(with: 1)
-        buttonPlusMinus.setSize(size: buttonSize)
-        buttonPlusMinus.aspectRatio(with: 1)
-        buttonPercent.setSize(size: buttonSize)
-        buttonPercent.aspectRatio(with: 1)
-        buttonDivision.setSize(size: buttonSize)
-        buttonDivision.aspectRatio(with: 1)
+        buttonAC.constraintWidth(toAnchor: buttonAC.heightAnchor, multiplier: 1)
+        buttonPlusMinus.constraintWidth(toAnchor: buttonPlusMinus.heightAnchor, multiplier: 1)
+        buttonPercent.constraintWidth(toAnchor: buttonPercent.heightAnchor, multiplier: 1)
+        buttonDivision.constraintWidth(toAnchor: buttonDivision.heightAnchor, multiplier: 1)
     }
     
     private func setupConstraintsButtonsLineTwo() {
-        buttonSeven.setSize(size: buttonSize)
-        buttonSeven.aspectRatio(with: 1)
-        buttonEight.setSize(size: buttonSize)
-        buttonEight.aspectRatio(with: 1)
-        buttonNine.setSize(size: buttonSize)
-        buttonNine.aspectRatio(with: 1)
-        buttonMultiply.setSize(size: buttonSize)
-        buttonMultiply.aspectRatio(with: 1)
+        buttonSeven.constraintWidth(toAnchor: buttonSeven.heightAnchor, multiplier: 1)
+        buttonEight.constraintWidth(toAnchor: buttonEight.heightAnchor, multiplier: 1)
+        buttonNine.constraintWidth(toAnchor: buttonNine.heightAnchor, multiplier: 1)
+        buttonMultiply.constraintWidth(toAnchor: buttonMultiply.heightAnchor, multiplier: 1)
     }
     
     private func setupConstraintsButtonsLineThree() {
-        buttonFour.setSize(size: buttonSize)
-        buttonFour.aspectRatio(with: 1)
-        buttonFive.setSize(size: buttonSize)
-        buttonFive.aspectRatio(with: 1)
-        buttonSix.setSize(size: buttonSize)
-        buttonSix.aspectRatio(with: 1)
-        buttonMinus.setSize(size: buttonSize)
-        buttonMinus.aspectRatio(with: 1)
+        buttonFour.constraintWidth(toAnchor: buttonFour.heightAnchor, multiplier: 1)
+        buttonFive.constraintWidth(toAnchor: buttonFive.heightAnchor, multiplier: 1)
+        buttonSix.constraintWidth(toAnchor: buttonSix.heightAnchor, multiplier: 1)
+        buttonMinus.constraintWidth(toAnchor: buttonMinus.heightAnchor, multiplier: 1)
     }
     
     private func setupConstraintsButtonsLineFour() {
-        buttonOne.setSize(size: buttonSize)
-        buttonOne.aspectRatio(with: 1)
-        buttonTwo.setSize(size: buttonSize)
-        buttonTwo.aspectRatio(with: 1)
-        buttonThree.setSize(size: buttonSize)
-        buttonThree.aspectRatio(with: 1)
-        buttonPlus.setSize(size: buttonSize)
-        buttonPlus.aspectRatio(with: 1)
+        buttonOne.constraintWidth(toAnchor: buttonOne.heightAnchor, multiplier: 1)
+        buttonTwo.constraintWidth(toAnchor: buttonTwo.heightAnchor, multiplier: 1)
+        buttonThree.constraintWidth(toAnchor: buttonThree.heightAnchor, multiplier: 1)
+        buttonPlus.constraintWidth(toAnchor: buttonPlus.heightAnchor, multiplier: 1)
     }
     
     private func setupConstraintsButtonsLineFive() {
-        buttonZero.setSize(size: buttonSize)
-        buttonZero.aspectRatio(with: 2.10)
-        buttonDot.setSize(size: buttonSize)
-        buttonDot.aspectRatio(with: 1)
-        buttonEqual.setSize(size: buttonSize)
-        buttonEqual.aspectRatio(with: 1)
+        buttonZero.constraintWidth(toAnchor: buttonZero.heightAnchor, multiplier: 2.1)
+        buttonDot.constraintWidth(toAnchor: buttonDot.heightAnchor, multiplier: 1)
+        buttonEqual.constraintWidth(toAnchor: buttonEqual.heightAnchor, multiplier: 1)
     }
     
 }
