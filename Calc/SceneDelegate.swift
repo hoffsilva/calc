@@ -25,11 +25,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 theme: CalculatorTheme(
                     backgroundColor: "#000000",
                     displayColor: "#FFFFFF",
-                    extraFunctionColor: "#000000",
+                    extraFunctionColor: "#a6a6a6",
                     extraFunctionTitleColor: "#FFFFFF",
-                    operationColor: "#000000",
+                    operationColor: "#ff9f0a",
                     operationTitleColor: "#FFFFFF",
-                    pinpadColor: "#000000",
+                    pinpadColor: "#333333",
                     pinpadTitleColor: "#FFFFFF")
             )
         )
