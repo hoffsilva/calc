@@ -9,6 +9,8 @@ import UIKit
 
 public final class HomeView: UIView {
     
+    private let theme: CalculatorTheme
+    
     private lazy var buttonSize: CGSize = {
         CGSize(width: 78, height: 78)
     }()
@@ -26,7 +28,7 @@ public final class HomeView: UIView {
     private lazy var LCDDisplayView: UIView = {
         UIViewBuilderImp()
             .prepareForConstraints()
-            .withBackgroundColor(.white)
+            .withBackgroundColor(.clear)
             .build()
     }()
     
@@ -36,6 +38,7 @@ public final class HomeView: UIView {
             .withAlignment(.right)
             .withText("0")
             .withFont(.systemFont(ofSize: 100))
+            .withColor(theme.displayColor)
             .build()
     }()
     
@@ -49,35 +52,47 @@ public final class HomeView: UIView {
             .build()
     }()
     
-    private lazy var buttonAC: UIButton = {
+    private lazy var extraButtonAC: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
             .withTitle("AC", state: .normal)
-            .withBackgroundColor(.systemYellow)
+            .withBackgroundColor(.clear)
+            .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
+            .withTintColor(theme.extraFunctionColor)
+            .withTitleColor(theme.extraFunctionTitleColor, state: .normal)
             .build()
     }()
     
-    private lazy var buttonPlusMinus: UIButton = {
+    private lazy var extraButtonPlusMinus: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
             .withTitle("+/-", state: .normal)
-            .withBackgroundColor(.systemYellow)
+            .withBackgroundColor(.clear)
+            .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
+            .withTintColor(theme.extraFunctionColor)
+            .withTitleColor(theme.extraFunctionTitleColor, state: .normal)
             .build()
     }()
     
-    private lazy var buttonPercent: UIButton = {
+    private lazy var extraButtonPercent: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
             .withTitle("%", state: .normal)
-            .withBackgroundColor(.systemYellow)
+            .withBackgroundColor(.clear)
+            .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
+            .withTintColor(theme.extraFunctionColor)
+            .withTitleColor(theme.extraFunctionTitleColor, state: .normal)
             .build()
     }()
     
-    private lazy var buttonDivision: UIButton = {
+    private lazy var operationButtonDivision: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
             .withTitle("/", state: .normal)
-            .withBackgroundColor(.systemYellow)
+            .withBackgroundColor(.clear)
+            .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
+            .withTintColor(theme.operationColor)
+            .withTitleColor(theme.operationTitleColor, state: .normal)
             .build()
     }()
     
@@ -91,35 +106,47 @@ public final class HomeView: UIView {
             .build()
     }()
     
-    private lazy var buttonSeven: UIButton = {
+    private lazy var pinpadButtonSeven: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
             .withTitle("7", state: .normal)
-            .withBackgroundColor(.systemYellow)
+            .withBackgroundColor(.clear)
+            .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
+            .withTintColor(theme.pinpadColor)
+            .withTitleColor(theme.pinpadTitleColor, state: .normal)
             .build()
     }()
     
-    private lazy var buttonEight: UIButton = {
+    private lazy var pinpadButtonEight: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
             .withTitle("8", state: .normal)
-            .withBackgroundColor(.systemYellow)
+            .withBackgroundColor(.clear)
+            .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
+            .withTintColor(theme.pinpadColor)
+            .withTitleColor(theme.pinpadTitleColor, state: .normal)
             .build()
     }()
     
-    private lazy var buttonNine: UIButton = {
+    private lazy var pinpadButtonNine: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
             .withTitle("9", state: .normal)
-            .withBackgroundColor(.systemYellow)
+            .withBackgroundColor(.clear)
+            .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
+            .withTintColor(theme.pinpadColor)
+            .withTitleColor(theme.pinpadTitleColor, state: .normal)
             .build()
     }()
     
-    private lazy var buttonMultiply: UIButton = {
+    private lazy var operationButtonMultiply: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
             .withTitle("*", state: .normal)
-            .withBackgroundColor(.systemYellow)
+            .withBackgroundColor(.clear)
+            .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
+            .withTintColor(theme.operationColor)
+            .withTitleColor(theme.operationTitleColor, state: .normal)
             .build()
     }()
     
@@ -133,35 +160,47 @@ public final class HomeView: UIView {
             .build()
     }()
     
-    private lazy var buttonFour: UIButton = {
+    private lazy var pinpadButtonFour: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
             .withTitle("4", state: .normal)
-            .withBackgroundColor(.systemYellow)
+            .withBackgroundColor(.clear)
+            .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
+            .withTintColor(theme.pinpadColor)
+            .withTitleColor(theme.pinpadTitleColor, state: .normal)
             .build()
     }()
     
-    private lazy var buttonFive: UIButton = {
+    private lazy var pinpadButtonFive: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
             .withTitle("5", state: .normal)
-            .withBackgroundColor(.systemYellow)
+            .withBackgroundColor(.clear)
+            .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
+            .withTintColor(theme.pinpadColor)
+            .withTitleColor(theme.pinpadTitleColor, state: .normal)
             .build()
     }()
     
-    private lazy var buttonSix: UIButton = {
+    private lazy var pinpadButtonSix: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
             .withTitle("6", state: .normal)
-            .withBackgroundColor(.systemYellow)
+            .withBackgroundColor(.clear)
+            .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
+            .withTintColor(theme.pinpadColor)
+            .withTitleColor(theme.pinpadTitleColor, state: .normal)
             .build()
     }()
     
-    private lazy var buttonMinus: UIButton = {
+    private lazy var operationButtonMinus: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
             .withTitle("-", state: .normal)
-            .withBackgroundColor(.systemYellow)
+            .withBackgroundColor(.clear)
+            .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
+            .withTintColor(theme.operationColor)
+            .withTitleColor(theme.operationTitleColor, state: .normal)
             .build()
     }()
     
@@ -176,35 +215,47 @@ public final class HomeView: UIView {
             .build()
     }()
     
-    private lazy var buttonOne: UIButton = {
+    private lazy var pindpadButtonOne: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
             .withTitle("1", state: .normal)
-            .withBackgroundColor(.systemYellow)
+            .withBackgroundColor(.clear)
+            .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
+            .withTintColor(theme.pinpadColor)
+            .withTitleColor(theme.pinpadTitleColor, state: .normal)
             .build()
     }()
     
-    private lazy var buttonTwo: UIButton = {
+    private lazy var pinpadButtonTwo: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
             .withTitle("2", state: .normal)
-            .withBackgroundColor(.systemYellow)
+            .withBackgroundColor(.clear)
+            .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
+            .withTintColor(theme.pinpadColor)
+            .withTitleColor(theme.pinpadTitleColor, state: .normal)
             .build()
     }()
     
-    private lazy var buttonThree: UIButton = {
+    private lazy var pindpadButtonThree: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
             .withTitle("3", state: .normal)
-            .withBackgroundColor(.systemYellow)
+            .withBackgroundColor(.clear)
+            .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
+            .withTintColor(theme.pinpadColor)
+            .withTitleColor(theme.pinpadTitleColor, state: .normal)
             .build()
     }()
     
-    private lazy var buttonPlus: UIButton = {
+    private lazy var operationButtonPlus: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
             .withTitle("+", state: .normal)
-            .withBackgroundColor(.systemYellow)
+            .withBackgroundColor(.clear)
+            .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
+            .withTintColor(theme.operationColor)
+            .withTitleColor(theme.operationTitleColor, state: .normal)
             .build()
     }()
     
@@ -218,33 +269,43 @@ public final class HomeView: UIView {
             .build()
     }()
     
-    private lazy var buttonZero: UIButton = {
+    private lazy var pinpadButtonZero: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
             .withTitle("0", state: .normal)
-            .withBackgroundColor(.systemYellow)
+            .withBackgroundColor(.clear)
+            .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
+            .withTintColor(theme.pinpadColor)
+            .withTitleColor(theme.pinpadTitleColor, state: .normal)
             .build()
     }()
     
-    private lazy var buttonDot: UIButton = {
+    private lazy var pinpadButtonDot: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
             .withTitle(".", state: .normal)
-            .withBackgroundColor(.systemYellow)
+            .withBackgroundColor(.clear)
+            .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
+            .withTintColor(theme.pinpadColor)
+            .withTitleColor(theme.pinpadTitleColor, state: .normal)
             .build()
     }()
     
-    private lazy var buttonEqual: UIButton = {
+    private lazy var operationButtonEqual: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
             .withTitle("=", state: .normal)
-            .withBackgroundColor(.systemYellow)
+            .withBackgroundColor(.clear)
+            .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
+            .withTintColor(theme.operationColor)
+            .withTitleColor(theme.operationTitleColor, state: .normal)
             .build()
     }()
     
     // MARK: - Initialization
     
-    public init() {
+    public init(theme: CalculatorTheme) {
+        self.theme = theme
         super.init(frame: .zero)
         configureView()
     }
@@ -286,80 +347,80 @@ extension HomeView: UIViewCodable {
     }
     
     public func additionalConfiguration() {
-        self.backgroundColor = .red
+        self.backgroundColor = .black
     }
     
     private func setupHorizontalStackViewLineOneViewsHierarchy() {
         verticalContentStackView.addArrangedSubview(horizontalStackViewLineOne)
-        horizontalStackViewLineOne.addArrangedSubview(buttonAC)
-        horizontalStackViewLineOne.addArrangedSubview(buttonPlusMinus)
-        horizontalStackViewLineOne.addArrangedSubview(buttonPercent)
-        horizontalStackViewLineOne.addArrangedSubview(buttonDivision)
+        horizontalStackViewLineOne.addArrangedSubview(extraButtonAC)
+        horizontalStackViewLineOne.addArrangedSubview(extraButtonPlusMinus)
+        horizontalStackViewLineOne.addArrangedSubview(extraButtonPercent)
+        horizontalStackViewLineOne.addArrangedSubview(operationButtonDivision)
     }
     
     private func setupHorizontalStackViewLineTwoViewsHierarchy() {
         verticalContentStackView.addArrangedSubview(horizontalStackViewLineTwo)
-        horizontalStackViewLineTwo.addArrangedSubview(buttonSeven)
-        horizontalStackViewLineTwo.addArrangedSubview(buttonEight)
-        horizontalStackViewLineTwo.addArrangedSubview(buttonNine)
-        horizontalStackViewLineTwo.addArrangedSubview(buttonMultiply)
+        horizontalStackViewLineTwo.addArrangedSubview(pinpadButtonSeven)
+        horizontalStackViewLineTwo.addArrangedSubview(pinpadButtonEight)
+        horizontalStackViewLineTwo.addArrangedSubview(pinpadButtonNine)
+        horizontalStackViewLineTwo.addArrangedSubview(operationButtonMultiply)
     }
     
     private func setupHorizontalStackViewLineThreeViewsHierarchy() {
         verticalContentStackView.addArrangedSubview(horizontalStackViewLineThree)
-        horizontalStackViewLineThree.addArrangedSubview(buttonFour)
-        horizontalStackViewLineThree.addArrangedSubview(buttonFive)
-        horizontalStackViewLineThree.addArrangedSubview(buttonSix)
-        horizontalStackViewLineThree.addArrangedSubview(buttonMinus)
+        horizontalStackViewLineThree.addArrangedSubview(pinpadButtonFour)
+        horizontalStackViewLineThree.addArrangedSubview(pinpadButtonFive)
+        horizontalStackViewLineThree.addArrangedSubview(pinpadButtonSix)
+        horizontalStackViewLineThree.addArrangedSubview(operationButtonMinus)
     }
     
     private func setupHorizontalStackViewLineFourViewsHierarchy() {
         verticalContentStackView.addArrangedSubview(horizontalStackViewLineFour)
-        horizontalStackViewLineFour.addArrangedSubview(buttonOne)
-        horizontalStackViewLineFour.addArrangedSubview(buttonTwo)
-        horizontalStackViewLineFour.addArrangedSubview(buttonThree)
-        horizontalStackViewLineFour.addArrangedSubview(buttonPlus)
+        horizontalStackViewLineFour.addArrangedSubview(pindpadButtonOne)
+        horizontalStackViewLineFour.addArrangedSubview(pinpadButtonTwo)
+        horizontalStackViewLineFour.addArrangedSubview(pindpadButtonThree)
+        horizontalStackViewLineFour.addArrangedSubview(operationButtonPlus)
     }
     
     private func setupHorizontalStackViewLineFiveViewsHierarchy() {
         verticalContentStackView.addArrangedSubview(horizontalStackViewLineFive)
-        horizontalStackViewLineFive.addArrangedSubview(buttonZero)
-        horizontalStackViewLineFive.addArrangedSubview(buttonDot)
-        horizontalStackViewLineFive.addArrangedSubview(buttonEqual)
+        horizontalStackViewLineFive.addArrangedSubview(pinpadButtonZero)
+        horizontalStackViewLineFive.addArrangedSubview(pinpadButtonDot)
+        horizontalStackViewLineFive.addArrangedSubview(operationButtonEqual)
     }
     
     private func setupConstraintsButtonsLineOne() {
-        buttonAC.constraintWidth(toAnchor: buttonAC.heightAnchor, multiplier: 1)
-        buttonPlusMinus.constraintWidth(toAnchor: buttonPlusMinus.heightAnchor, multiplier: 1)
-        buttonPercent.constraintWidth(toAnchor: buttonPercent.heightAnchor, multiplier: 1)
-        buttonDivision.constraintWidth(toAnchor: buttonDivision.heightAnchor, multiplier: 1)
+        extraButtonAC.constraintWidth(toAnchor: extraButtonAC.heightAnchor, multiplier: 1)
+        extraButtonPlusMinus.constraintWidth(toAnchor: extraButtonPlusMinus.heightAnchor, multiplier: 1)
+        extraButtonPercent.constraintWidth(toAnchor: extraButtonPercent.heightAnchor, multiplier: 1)
+        operationButtonDivision.constraintWidth(toAnchor: operationButtonDivision.heightAnchor, multiplier: 1)
     }
     
     private func setupConstraintsButtonsLineTwo() {
-        buttonSeven.constraintWidth(toAnchor: buttonSeven.heightAnchor, multiplier: 1)
-        buttonEight.constraintWidth(toAnchor: buttonEight.heightAnchor, multiplier: 1)
-        buttonNine.constraintWidth(toAnchor: buttonNine.heightAnchor, multiplier: 1)
-        buttonMultiply.constraintWidth(toAnchor: buttonMultiply.heightAnchor, multiplier: 1)
+        pinpadButtonSeven.constraintWidth(toAnchor: pinpadButtonSeven.heightAnchor, multiplier: 1)
+        pinpadButtonEight.constraintWidth(toAnchor: pinpadButtonEight.heightAnchor, multiplier: 1)
+        pinpadButtonNine.constraintWidth(toAnchor: pinpadButtonNine.heightAnchor, multiplier: 1)
+        operationButtonMultiply.constraintWidth(toAnchor: operationButtonMultiply.heightAnchor, multiplier: 1)
     }
     
     private func setupConstraintsButtonsLineThree() {
-        buttonFour.constraintWidth(toAnchor: buttonFour.heightAnchor, multiplier: 1)
-        buttonFive.constraintWidth(toAnchor: buttonFive.heightAnchor, multiplier: 1)
-        buttonSix.constraintWidth(toAnchor: buttonSix.heightAnchor, multiplier: 1)
-        buttonMinus.constraintWidth(toAnchor: buttonMinus.heightAnchor, multiplier: 1)
+        pinpadButtonFour.constraintWidth(toAnchor: pinpadButtonFour.heightAnchor, multiplier: 1)
+        pinpadButtonFive.constraintWidth(toAnchor: pinpadButtonFive.heightAnchor, multiplier: 1)
+        pinpadButtonSix.constraintWidth(toAnchor: pinpadButtonSix.heightAnchor, multiplier: 1)
+        operationButtonMinus.constraintWidth(toAnchor: operationButtonMinus.heightAnchor, multiplier: 1)
     }
     
     private func setupConstraintsButtonsLineFour() {
-        buttonOne.constraintWidth(toAnchor: buttonOne.heightAnchor, multiplier: 1)
-        buttonTwo.constraintWidth(toAnchor: buttonTwo.heightAnchor, multiplier: 1)
-        buttonThree.constraintWidth(toAnchor: buttonThree.heightAnchor, multiplier: 1)
-        buttonPlus.constraintWidth(toAnchor: buttonPlus.heightAnchor, multiplier: 1)
+        pindpadButtonOne.constraintWidth(toAnchor: pindpadButtonOne.heightAnchor, multiplier: 1)
+        pinpadButtonTwo.constraintWidth(toAnchor: pinpadButtonTwo.heightAnchor, multiplier: 1)
+        pindpadButtonThree.constraintWidth(toAnchor: pindpadButtonThree.heightAnchor, multiplier: 1)
+        operationButtonPlus.constraintWidth(toAnchor: operationButtonPlus.heightAnchor, multiplier: 1)
     }
     
     private func setupConstraintsButtonsLineFive() {
-        buttonZero.constraintWidth(toAnchor: buttonZero.heightAnchor, multiplier: 2.1)
-        buttonDot.constraintWidth(toAnchor: buttonDot.heightAnchor, multiplier: 1)
-        buttonEqual.constraintWidth(toAnchor: buttonEqual.heightAnchor, multiplier: 1)
+        pinpadButtonZero.constraintWidth(toAnchor: pinpadButtonZero.heightAnchor, multiplier: 2.1)
+        pinpadButtonDot.constraintWidth(toAnchor: pinpadButtonDot.heightAnchor, multiplier: 1)
+        operationButtonEqual.constraintWidth(toAnchor: operationButtonEqual.heightAnchor, multiplier: 1)
     }
     
 }
