@@ -347,7 +347,7 @@ extension HomeView: UIViewCodable {
     }
     
     public func additionalConfiguration() {
-        self.backgroundColor = .black
+        self.backgroundColor = theme.backgroundColor
     }
     
     private func setupHorizontalStackViewLineOneViewsHierarchy() {

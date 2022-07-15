@@ -11,7 +11,7 @@ public struct CalculatorTheme {
     
     public init() {}
     
-    let backgroundColor = UIColor.lightGray
+    let backgroundColor = UIColor.black
     let displayColor = UIColor.white
     
     let extraFunctionColor = UIColor.lightGray
