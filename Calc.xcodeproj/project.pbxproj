@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B95C7892880BB0D00148647 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B95C7882880BB0D00148647 /* AppDelegate.swift */; };
 		0B95C78B2880BB0D00148647 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B95C78A2880BB0D00148647 /* SceneDelegate.swift */; };
-		0B95C78D2880BB0D00148647 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B95C78C2880BB0D00148647 /* ViewController.swift */; };
+		0B95C78D2880BB0D00148647 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B95C78C2880BB0D00148647 /* HomeViewController.swift */; };
 		0B95C7922880BB0D00148647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B95C7912880BB0D00148647 /* Assets.xcassets */; };
 		0B95C7952880BB0D00148647 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B95C7932880BB0D00148647 /* LaunchScreen.storyboard */; };
 		0B95C79B2880BB6000148647 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB8BA74287DC23D0044D1B3 /* UI.framework */; };
@@ -26,6 +26,8 @@
 		0BB8BAA2287E15380044D1B3 /* UIButtonBuilderImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB8BAA1287E15380044D1B3 /* UIButtonBuilderImp.swift */; };
 		0BB8BAA5287F62360044D1B3 /* UILabelBuilderImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB8BAA4287F62360044D1B3 /* UILabelBuilderImp.swift */; };
 		0BB8BAA7287F62700044D1B3 /* UILabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB8BAA6287F62700044D1B3 /* UILabelBuilder.swift */; };
+		0BE397F828820A0B008C5F6F /* UIColor+HexValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE397F728820A0B008C5F6F /* UIColor+HexValue.swift */; };
+		0BE397FB28820B21008C5F6F /* CalculatorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE397FA28820B21008C5F6F /* CalculatorTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +51,7 @@
 		0B95C7862880BB0D00148647 /* Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B95C7882880BB0D00148647 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B95C78A2880BB0D00148647 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0B95C78C2880BB0D00148647 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0B95C78C2880BB0D00148647 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0B95C7912880BB0D00148647 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B95C7942880BB0D00148647 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B95C7962880BB0D00148647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,6 +69,8 @@
 		0BB8BAA1287E15380044D1B3 /* UIButtonBuilderImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonBuilderImp.swift; sourceTree = "<group>"; };
 		0BB8BAA4287F62360044D1B3 /* UILabelBuilderImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelBuilderImp.swift; sourceTree = "<group>"; };
 		0BB8BAA6287F62700044D1B3 /* UILabelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelBuilder.swift; sourceTree = "<group>"; };
+		0BE397F728820A0B008C5F6F /* UIColor+HexValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HexValue.swift"; sourceTree = "<group>"; };
+		0BE397FA28820B21008C5F6F /* CalculatorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +105,7 @@
 			children = (
 				0B95C7882880BB0D00148647 /* AppDelegate.swift */,
 				0B95C78A2880BB0D00148647 /* SceneDelegate.swift */,
-				0B95C78C2880BB0D00148647 /* ViewController.swift */,
-				0B95C7912880BB0D00148647 /* Assets.xcassets */,
+				0B95C78C2880BB0D00148647 /* HomeViewController.swift */,
 				0B95C7932880BB0D00148647 /* LaunchScreen.storyboard */,
 				0B95C7962880BB0D00148647 /* Info.plist */,
 			);
@@ -156,6 +159,8 @@
 		0BB8BA8B287DC50C0044D1B3 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				0BE397F928820B13008C5F6F /* Theme */,
+				0B95C7912880BB0D00148647 /* Assets.xcassets */,
 				0BB8BA90287DCB7A0044D1B3 /* UIViewCodable */,
 				0BB8BA8D287DC5A70044D1B3 /* UIView */,
 				0BB8BA8C287DC5170044D1B3 /* Extensions */,
@@ -166,6 +171,7 @@
 		0BB8BA8C287DC5170044D1B3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0BE397F728820A0B008C5F6F /* UIColor+HexValue.swift */,
 				0BB8BA89287DC4BF0044D1B3 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
@@ -233,6 +239,14 @@
 				0BB8BAA6287F62700044D1B3 /* UILabelBuilder.swift */,
 			);
 			path = UILabel;
+			sourceTree = "<group>";
+		};
+		0BE397F928820B13008C5F6F /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				0BE397FA28820B21008C5F6F /* CalculatorTheme.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,7 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B95C78D2880BB0D00148647 /* ViewController.swift in Sources */,
+				0B95C78D2880BB0D00148647 /* HomeViewController.swift in Sources */,
 				0B95C7892880BB0D00148647 /* AppDelegate.swift in Sources */,
 				0B95C78B2880BB0D00148647 /* SceneDelegate.swift in Sources */,
 			);
@@ -391,7 +405,9 @@
 				0BB8BA92287DF2A40044D1B3 /* HomeView.swift in Sources */,
 				0BB8BA8A287DC4BF0044D1B3 /* UIView+Extension.swift in Sources */,
 				0BB8BA95287DF9E30044D1B3 /* UIViewBuilder.swift in Sources */,
+				0BE397FB28820B21008C5F6F /* CalculatorTheme.swift in Sources */,
 				0BB8BAA2287E15380044D1B3 /* UIButtonBuilderImp.swift in Sources */,
+				0BE397F828820A0B008C5F6F /* UIColor+HexValue.swift in Sources */,
 				0BB8BA97287DFAF20044D1B3 /* UIViewBuilderImp.swift in Sources */,
 				0BB8BAA5287F62360044D1B3 /* UILabelBuilderImp.swift in Sources */,
 				0BB8BA9B287E01950044D1B3 /* UIStackViewBuilderImp.swift in Sources */,

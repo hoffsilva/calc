@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  Calc
 //
 //  Created by Hoff Silva on 2022-07-14.
@@ -8,7 +8,7 @@
 import UIKit
 import UI
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     private var viewCodable: HomeView
     
