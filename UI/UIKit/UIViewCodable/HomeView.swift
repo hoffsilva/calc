@@ -66,7 +66,7 @@ public final class HomeView: UIView {
     private lazy var extraButtonPlusMinus: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
-            .withTitle("+/-", state: .normal)
+            .withTitle("⁺∕₋", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
             .withTintColor(UIColor.fromHexadecimal(hex: theme.extraFunctionColor))
@@ -88,7 +88,7 @@ public final class HomeView: UIView {
     private lazy var operationButtonDivision: UIButton = {
         UIButtonBuilderImp()
             .prepareForConstraints()
-            .withTitle("/", state: .normal)
+            .withTitle("÷", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
             .withTintColor(UIColor.fromHexadecimal(hex: theme.operationColor))
