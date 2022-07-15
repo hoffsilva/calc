@@ -38,7 +38,7 @@ public final class HomeView: UIView {
             .withAlignment(.right)
             .withText("0")
             .withFont(.systemFont(ofSize: 100))
-            .withColor(theme.displayColor)
+            .withColor(UIColor.fromHexadecimal(hex: theme.displayColor))
             .build()
     }()
     
@@ -58,8 +58,8 @@ public final class HomeView: UIView {
             .withTitle("AC", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
-            .withTintColor(theme.extraFunctionColor)
-            .withTitleColor(theme.extraFunctionTitleColor, state: .normal)
+            .withTintColor(UIColor.fromHexadecimal(hex: theme.extraFunctionColor))
+            .withTitleColor(UIColor.fromHexadecimal(hex: theme.extraFunctionTitleColor), state: .normal)
             .build()
     }()
     
@@ -69,8 +69,8 @@ public final class HomeView: UIView {
             .withTitle("+/-", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
-            .withTintColor(theme.extraFunctionColor)
-            .withTitleColor(theme.extraFunctionTitleColor, state: .normal)
+            .withTintColor(UIColor.fromHexadecimal(hex: theme.extraFunctionColor))
+            .withTitleColor(UIColor.fromHexadecimal(hex: theme.extraFunctionTitleColor), state: .normal)
             .build()
     }()
     
@@ -80,8 +80,8 @@ public final class HomeView: UIView {
             .withTitle("%", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
-            .withTintColor(theme.extraFunctionColor)
-            .withTitleColor(theme.extraFunctionTitleColor, state: .normal)
+            .withTintColor(UIColor.fromHexadecimal(hex: theme.extraFunctionColor))
+            .withTitleColor(UIColor.fromHexadecimal(hex: theme.extraFunctionTitleColor), state: .normal)
             .build()
     }()
     
@@ -91,8 +91,8 @@ public final class HomeView: UIView {
             .withTitle("/", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
-            .withTintColor(theme.operationColor)
-            .withTitleColor(theme.operationTitleColor, state: .normal)
+            .withTintColor(UIColor.fromHexadecimal(hex: theme.operationColor))
+            .withTitleColor(UIColor.fromHexadecimal(hex: theme.operationTitleColor), state: .normal)
             .build()
     }()
     
@@ -112,8 +112,8 @@ public final class HomeView: UIView {
             .withTitle("7", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
-            .withTintColor(theme.pinpadColor)
-            .withTitleColor(theme.pinpadTitleColor, state: .normal)
+            .withTintColor(UIColor.fromHexadecimal(hex: theme.pinpadColor))
+            .withTitleColor(UIColor.fromHexadecimal(hex: theme.pinpadTitleColor), state: .normal)
             .build()
     }()
     
@@ -123,8 +123,8 @@ public final class HomeView: UIView {
             .withTitle("8", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
-            .withTintColor(theme.pinpadColor)
-            .withTitleColor(theme.pinpadTitleColor, state: .normal)
+            .withTintColor(UIColor.fromHexadecimal(hex: theme.pinpadColor))
+            .withTitleColor(UIColor.fromHexadecimal(hex: theme.pinpadTitleColor), state: .normal)
             .build()
     }()
     
@@ -134,8 +134,8 @@ public final class HomeView: UIView {
             .withTitle("9", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
-            .withTintColor(theme.pinpadColor)
-            .withTitleColor(theme.pinpadTitleColor, state: .normal)
+            .withTintColor(UIColor.fromHexadecimal(hex: theme.pinpadColor))
+            .withTitleColor(UIColor.fromHexadecimal(hex: theme.pinpadTitleColor), state: .normal)
             .build()
     }()
     
@@ -145,8 +145,8 @@ public final class HomeView: UIView {
             .withTitle("*", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
-            .withTintColor(theme.operationColor)
-            .withTitleColor(theme.operationTitleColor, state: .normal)
+            .withTintColor(UIColor.fromHexadecimal(hex: theme.operationColor))
+            .withTitleColor(UIColor.fromHexadecimal(hex: theme.operationTitleColor), state: .normal)
             .build()
     }()
     
@@ -166,8 +166,8 @@ public final class HomeView: UIView {
             .withTitle("4", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
-            .withTintColor(theme.pinpadColor)
-            .withTitleColor(theme.pinpadTitleColor, state: .normal)
+            .withTintColor(UIColor.fromHexadecimal(hex: theme.pinpadColor))
+            .withTitleColor(UIColor.fromHexadecimal(hex: theme.pinpadTitleColor), state: .normal)
             .build()
     }()
     
@@ -177,8 +177,8 @@ public final class HomeView: UIView {
             .withTitle("5", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
-            .withTintColor(theme.pinpadColor)
-            .withTitleColor(theme.pinpadTitleColor, state: .normal)
+            .withTintColor(UIColor.fromHexadecimal(hex: theme.pinpadColor))
+            .withTitleColor(UIColor.fromHexadecimal(hex: theme.pinpadTitleColor), state: .normal)
             .build()
     }()
     
@@ -188,8 +188,8 @@ public final class HomeView: UIView {
             .withTitle("6", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
-            .withTintColor(theme.pinpadColor)
-            .withTitleColor(theme.pinpadTitleColor, state: .normal)
+            .withTintColor(UIColor.fromHexadecimal(hex: theme.pinpadColor))
+            .withTitleColor(UIColor.fromHexadecimal(hex: theme.pinpadTitleColor), state: .normal)
             .build()
     }()
     
@@ -199,8 +199,8 @@ public final class HomeView: UIView {
             .withTitle("-", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
-            .withTintColor(theme.operationColor)
-            .withTitleColor(theme.operationTitleColor, state: .normal)
+            .withTintColor(UIColor.fromHexadecimal(hex: theme.operationColor))
+            .withTitleColor(UIColor.fromHexadecimal(hex: theme.operationTitleColor), state: .normal)
             .build()
     }()
     
@@ -221,8 +221,8 @@ public final class HomeView: UIView {
             .withTitle("1", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
-            .withTintColor(theme.pinpadColor)
-            .withTitleColor(theme.pinpadTitleColor, state: .normal)
+            .withTintColor(UIColor.fromHexadecimal(hex: theme.pinpadColor))
+            .withTitleColor(UIColor.fromHexadecimal(hex: theme.pinpadTitleColor), state: .normal)
             .build()
     }()
     
@@ -232,8 +232,8 @@ public final class HomeView: UIView {
             .withTitle("2", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
-            .withTintColor(theme.pinpadColor)
-            .withTitleColor(theme.pinpadTitleColor, state: .normal)
+            .withTintColor(UIColor.fromHexadecimal(hex: theme.pinpadColor))
+            .withTitleColor(UIColor.fromHexadecimal(hex: theme.pinpadTitleColor), state: .normal)
             .build()
     }()
     
@@ -243,8 +243,8 @@ public final class HomeView: UIView {
             .withTitle("3", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
-            .withTintColor(theme.pinpadColor)
-            .withTitleColor(theme.pinpadTitleColor, state: .normal)
+            .withTintColor(UIColor.fromHexadecimal(hex: theme.pinpadColor))
+            .withTitleColor(UIColor.fromHexadecimal(hex: theme.pinpadTitleColor), state: .normal)
             .build()
     }()
     
@@ -254,8 +254,8 @@ public final class HomeView: UIView {
             .withTitle("+", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
-            .withTintColor(theme.operationColor)
-            .withTitleColor(theme.operationTitleColor, state: .normal)
+            .withTintColor(UIColor.fromHexadecimal(hex: theme.operationColor))
+            .withTitleColor(UIColor.fromHexadecimal(hex: theme.operationTitleColor), state: .normal)
             .build()
     }()
     
@@ -275,8 +275,8 @@ public final class HomeView: UIView {
             .withTitle("0", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
-            .withTintColor(theme.pinpadColor)
-            .withTitleColor(theme.pinpadTitleColor, state: .normal)
+            .withTintColor(UIColor.fromHexadecimal(hex: theme.pinpadColor))
+            .withTitleColor(UIColor.fromHexadecimal(hex: theme.pinpadTitleColor), state: .normal)
             .build()
     }()
     
@@ -286,8 +286,8 @@ public final class HomeView: UIView {
             .withTitle(".", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
-            .withTintColor(theme.pinpadColor)
-            .withTitleColor(theme.pinpadTitleColor, state: .normal)
+            .withTintColor(UIColor.fromHexadecimal(hex: theme.pinpadColor))
+            .withTitleColor(UIColor.fromHexadecimal(hex: theme.pinpadTitleColor), state: .normal)
             .build()
     }()
     
@@ -297,8 +297,9 @@ public final class HomeView: UIView {
             .withTitle("=", state: .normal)
             .withBackgroundColor(.clear)
             .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
-            .withTintColor(theme.operationColor)
-            .withTitleColor(theme.operationTitleColor, state: .normal)
+            .withTintColor(UIColor.fromHexadecimal(hex: theme.operationColor))
+            .withTitleColor(UIColor.fromHexadecimal(hex: theme.operationTitleColor), state: .normal)
+            .withBackgroundImage(UIImage(named: "Circle"), state: .normal)
             .build()
     }()
     
@@ -347,7 +348,7 @@ extension HomeView: UIViewCodable {
     }
     
     public func additionalConfiguration() {
-        self.backgroundColor = theme.backgroundColor
+        self.backgroundColor = UIColor.fromHexadecimal(hex: theme.backgroundColor)
     }
     
     private func setupHorizontalStackViewLineOneViewsHierarchy() {

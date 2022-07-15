@@ -20,7 +20,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func configureWindow(with scene: UIWindowScene) {
         window = UIWindow(windowScene: scene)
         window?.makeKeyAndVisible()
-        window?.rootViewController = HomeViewController(viewCodable: HomeView(theme: CalculatorTheme()))
+        window?.rootViewController = HomeViewController(
+            viewCodable: HomeView(
+                theme: CalculatorTheme(
+                    backgroundColor: "#000000",
+                    displayColor: "#FFFFFF",
+                    extraFunctionColor: "#000000",
+                    extraFunctionTitleColor: "#FFFFFF",
+                    operationColor: "#000000",
+                    operationTitleColor: "#FFFFFF",
+                    pinpadColor: "#000000",
+                    pinpadTitleColor: "#FFFFFF")
+            )
+        )
     }
     
 }
